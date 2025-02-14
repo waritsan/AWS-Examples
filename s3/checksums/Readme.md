@@ -1,7 +1,7 @@
 ## Create a new s3 bucket
 
 ```md
-aws s3 mb s3://checksums-examples-ab-2342
+aws s3 mb s3://checksums-examples-ab-102438
 ```
 
 ## Create a file that will we do a checksum on
@@ -20,8 +20,8 @@ md5sum myfile.txt
 ## Upload our file and look at its etag
 
 ```
-aws s3 cp myfile.txt s3://checksums-examples-ab-2342
-aws s3api head-object --bucket checksums-examples-ab-2342 --key myfile.txt
+aws s3 cp myfile.txt s3://checksums-examples-ab-102438
+aws s3api head-object --bucket checksums-examples-ab-102438 --key myfile.txt
 ```
 
 ## Lets upload a file with a different kind of checsum
@@ -38,7 +38,7 @@ sha1sum myfile.txt
 
 ```sh
 aws s3api put-object \
---bucket="checksums-examples-ab-2342" \
+--bucket="checksums-examples-ab-102438" \
 --key="myfilesha1.txt" \
 --body="myfile.txt" \
 --checksum-algorithm="SHA1" \
