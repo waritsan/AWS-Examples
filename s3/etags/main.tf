@@ -9,6 +9,8 @@ terraform {
 
 provider "aws" {
   # Configuration options
+  region  = "us-east-1"  # Replace with your desired region
+  profile = "default" 
 }
 
 resource "aws_s3_bucket" "default" {
